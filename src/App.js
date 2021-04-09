@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Accordion from './components/Accordion';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const items = [
+    {
+        title: 'What is react?',
+        content: 'React is mad lame and kinda sucks'
+    },
+    {
+        title: 'Why react?',
+        content: 'because boss doesnt like Flutter'
+    },
+    {
+        title: 'Some react?',
+        content: 'React AKA lame city'
+    }
+];
+
+export default () => {
+    return (
+        <h1><Accordion items={items} /></h1>
+    );
 }
-
-export default App;
